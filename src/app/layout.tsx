@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Shreyas | Portfolio",
-  description: "Portfolio of Shreyas — Tech-savy developer and Computer Science student at Jain University.",
+  description: "Portfolio of Shreyas — Tech-savvy developer and Computer Science student at Jain University.",
 };
 
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
           </button>
         </header>
 
-        <main className="flex-grow w-full px-6 md:px-12 lg:px-24">
+        <main className="grow w-full px-6 md:px-12 lg:px-24">
           {children}
         </main>
 
