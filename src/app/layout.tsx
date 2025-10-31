@@ -17,24 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-black text-white flex flex-col min-h-screen`}
-      >
-        <header className="w-full px-6 md:px-12 lg:px-24 py-4 flex justify-center items-center border-b border-gray-800 relative">
-          <nav className="hidden md:flex gap-8 text-gray-300">
-            <a href="#about" className="hover:text-white transition-colors">
-              About
-            </a>
-            <a href="#projects" className="hover:text-white transition-colors">
-              Projects
-            </a>
-            <a href="#contact" className="hover:text-white transition-colors">
-              Contact
-            </a>
-          </nav>
-          <button className="md:hidden text-gray-300 hover:text-white transition-colors absolute right-6">
-            ☰
-          </button>
-        </header>
+        className={`${inter.className} bg-black text-white flex flex-col min-h-screen`}>
+      
 
         <main className="grow w-full px-6 md:px-12 lg:px-24">
           {children}

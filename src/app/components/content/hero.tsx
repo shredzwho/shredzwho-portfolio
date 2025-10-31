@@ -81,9 +81,12 @@ const Hero = React.memo(() => {
 
   return (
     <section ref={sectionRef} className={STYLES.SECTION}>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#050505]/90 to-black pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1),transparent_70%)] blur-xl pointer-events-none" />
-      <div className="absolute md:right-20 right-10 top-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-blue-500/15 to-purple-600/15 blur-xl" />
+      <div className="fixed top-0 left-0 w-screen h-screen -z-10">
+        {/*this is gradient class*/}
+        {/*<div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-[#050505]/70 to-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1),transparent_70%)] blur-xl" />
+        <div className="absolute md:right-20 right-10 top-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-500/15 to-purple-600/15 blur-2xl" />*/}
+      </div>
 
       <div className={STYLES.LEFT}>
         <div className="seq mb-2">
@@ -122,8 +125,8 @@ const Hero = React.memo(() => {
         </div>
       </div>
 
-      <div className="hero-img relative z-10 w-full md:w-3/4 flex justify-center items-center mt-10 md:mt-0">
-        <div className="scale-125 md:scale-150 transition-transform duration-500">
+      <div className="hero-img relative z-10 w-[clamp(400px,80vw,1100px)] flex justify-center items-center mt-10 md:mt-0 mx-auto">
+        <div className="scale-150 transition-transform duration-500">
           <HeroImage />
         </div>
       </div>
