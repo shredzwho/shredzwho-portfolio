@@ -8,11 +8,11 @@ import HeroImage from "./heroimage";
 const HERO_CONSTANTS = {
   NAME: "Shreyas",
   INTRO: "Hello 👋🏻",
-  ROLE_STRINGS: ["Tech Enthusiast", "Web Developer", "Problem Solver"],
+  ROLE_STRINGS: ["Tech Enthusiast", "Developer", "Problem Solver"],
   SOCIAL_LINKS: {
     github: "https://github.com/shredzwho",
     linkedin: "https://linkedin.com/in/shreyas",
-    instagram: "https://instagram.com/shreyas",
+    instagram: "https://instagram.com/shredzwho",
   },
 };
 
