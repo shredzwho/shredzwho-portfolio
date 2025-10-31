@@ -8,7 +8,7 @@ import HeroImage from "./heroimage";
 const HERO_CONSTANTS = {
   NAME: "Shreyas",
   INTRO: "Hello 👋🏻",
-  ROLE_STRINGS: ["Tech Enthusiast", "Developer", "Problem Solver"],
+  ROLE_STRINGS: ["I Design and Develop."],
   SOCIAL_LINKS: {
     github: "https://github.com/shredzwho",
     linkedin: "https://linkedin.com/in/shreyas",
@@ -20,9 +20,9 @@ const STYLES = {
   SECTION:
     "relative w-full min-h-screen flex flex-col md:flex-row justify-center items-center overflow-hidden bg-[#050505] px-6 md:px-20",
   LEFT:
-    "z-10 flex flex-col justify-center items-start w-full md:w-1/2 pt-28 md:pt-0 select-none",
+    "z-10 flex flex-col justify-center items-start w-full md:w-1/2 pt-36 md:pt-0 select-none space-y-6",
   TYPED:
-    "text-xl sm:text-2xl md:text-4xl text-gray-300 font-light tracking-wide",
+    "text-2xl sm:text-3xl md:text-5xl text-gray-300 font-medium tracking-wide",
   SOCIAL_LINK:
     "hover:opacity-80 duration-300 md:mr-4 mr-2 transition-all hover:scale-110",
 };
@@ -35,12 +35,17 @@ const Hero = React.memo(() => {
     const timer = setTimeout(() => {
       const typed = new Typed(typedRef.current, {
         strings: HERO_CONSTANTS.ROLE_STRINGS,
-        typeSpeed: 45,
-        backSpeed: 40,
-        backDelay: 2500,
-        loop: true,
-        showCursor: false,
+        typeSpeed: 100,
+        backSpeed: 0,
+        backDelay: 0,
+        loop: false,
+        showCursor: true,
       });
+      const cursorElement = document.querySelector(".typed-cursor") as HTMLElement;
+      if (cursorElement) {
+        cursorElement.style.fontSize = "3rem";
+        cursorElement.style.lineHeight = "1";
+      }
     }, 1200);
     return () => clearTimeout(timer);
   }, []);
@@ -67,8 +72,8 @@ const Hero = React.memo(() => {
         <Image
           src={`/social/${key}.svg`}
           alt={key}
-          width={40}
-          height={40}
+          width={48}
+          height={48}
           className={STYLES.SOCIAL_LINK}
         />
       </a>
@@ -82,12 +87,12 @@ const Hero = React.memo(() => {
 
       <div className={STYLES.LEFT}>
         <div className="seq mb-2">
-          <h2 className="text-4xl md:text-5xl text-white font-semibold">
+          <h2 className="text-5xl md:text-6xl text-white font-semibold">
             {HERO_CONSTANTS.INTRO}
           </h2>
         </div>
         <div className="seq mb-4">
-          <h1 className="text-3xl md:text-6xl text-white font-extrabold tracking-tight">
+          <h1 className="text-5xl md:text-7xl text-white font-extrabold tracking-tight leading-tight">
             I’m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
               {HERO_CONSTANTS.NAME}
@@ -104,13 +109,13 @@ const Hero = React.memo(() => {
             href="/Shreyas_Resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="border border-blue-500 text-blue-400 px-6 py-2 rounded-lg font-medium hover:bg-blue-500 hover:text-white transition-all duration-300"
+            className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
           >
             Resume
           </a>
           <a
             href="mailto:shreyas@example.com"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg font-medium shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300"
           >
             Let’s Talk
           </a>
