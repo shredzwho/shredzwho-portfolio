@@ -8,7 +8,7 @@ import HeroImage from "./heroimage";
 const HERO_CONSTANTS = {
   NAME: "Shreyas",
   INTRO: "Hello 👋🏻",
-  ROLE_STRINGS: ["I Design and Develop."],
+  ROLE_STRINGS: ["I Develop and Design."],
   SOCIAL_LINKS: {
     github: "https://github.com/shredzwho",
     linkedin: "https://linkedin.com/in/shreyas",
